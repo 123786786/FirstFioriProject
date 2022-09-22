@@ -1,0 +1,55 @@
+<mvc:View xmlns:mvc = "sap.ui.core.mvc" xmlns="sap.m" xmlns:f = "sap.ui.layout.form"
+          xmlns:core = "sap.ui.core" xmlns:viz.feeds = "sap.viz.ui5.controls.common.feeds"
+          xmlns:viz.data = "sap.viz.ui5.data" xmlns:viz = "sap.viz.ui5.controls"
+          controllerName= "ibm.sd.ap.Controllers.View3" >
+
+    <Page title="Supplier Data" showNavButton="true" navButtonPress="onGoToBack">          
+        <content>
+            <ObjectHeader title="{name}" intro="{city}" number="{contact}" icon="sap-icon://supplier">
+            </ObjectHeader>
+
+            <Select id="idChart" selectedKey="{/chartType}">
+                <core:Item key="bar" text="bar"></core:Item>
+                <core:Item key="column" text="column"></core:Item>
+                <core:Item key="line" text="line"></core:Item>
+                <core:Item key="pie" text="pie"></core:Item>
+            </Select>
+            <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+                height='100%' width="100%" vizType="{/chartType}">
+                <viz:dataset>
+                    <viz.data:FlattenedDataset data="{suppFruits}">
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition name="Fruit Name"
+                                value="{name}" />
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition name="Quantity Sold"
+                                value="{quantity}" />
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+                <!-- <viz:feeds>
+                    <viz.feeds:FeedItem uid="size" type="Measure"
+                        values="Quantity sold" />
+                    <viz.feeds:FeedItem uid="color" type="Dimension"
+                        values="Fruit Name" />
+                </viz:feeds> -->
+                <viz:feeds>
+                    <viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure"
+                        values="Quantity Sold" />
+                    <viz.feeds:FeedItem uid="categoryAxis" type="Dimension"
+                        values="Fruit Name" />
+                </viz:feeds>
+            </viz:VizFrame>
+
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer/>
+            </Toolbar>
+        </footer>
+        
+    </Page>      
+        
+</mvc:View>

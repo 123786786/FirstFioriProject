@@ -1,0 +1,36 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <Table id="idTab" items="{/ProductSet}" itemPress="onSupplierSelect">
+        <headerToolbar>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button icon="sap-icon://filter" tooltip="Filter Supplier" press="onFilterSupplier"></Button>
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column>
+                <header>
+                    <Label text="Supp Name" />
+                </header>
+            </Column>
+            <Column>
+                <header>
+                    <Label text="Supp City" />
+                </header>
+            </Column>
+            <Column minScreenWidth="Tablet" demandPopin="true">
+                <header>
+                    <Label text="Supp Contact" />
+                </header>
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem type="Navigation">
+                <cells>
+                    <Text text="{PRODUCT_ID}" />
+                    <Input value="{CURRENCY_CODE}" showValueHelp="true" valueHelpRequest="onF4Help" />
+                    <Text text="{TYPE_CODE}" />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</core:FragmentDefinition>

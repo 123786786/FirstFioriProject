@@ -1,0 +1,12 @@
+specVersion: '2.6'
+metadata:
+  name: firstfioriapp
+type: application
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        backend:
+        - path: /sap
+          url: http://sakdlap01.global.shiseido.com:50000/

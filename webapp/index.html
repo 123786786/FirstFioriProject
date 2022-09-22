@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <!-- Bootstrap - to load SAPUI5 framework from CDN -->
+        <script src="https://ui5.sap.com/resources/sap-ui-core.js"
+        data-sap-ui-libs="sap.m"
+        data-sap-ui-theme="sap_horizon_dark"
+        data-sap-ui-resourceroots='{
+            "ibm.sd.ap" : "./" }'>
+
+        </script>
+        <script>
+            //index.html is just for testing purpose
+            //Create object of the component container which is App view
+            var oComponentContainer = new sap.ui.core.ComponentContainer({
+                name: 'ibm.sd.ap'
+            });
+            
+            //Place the content of App view to the html
+            oComponentContainer.placeAt("content");
+        </script>
+        <title>Ui5 Fiori App</title>
+
+    </head>
+    <body class="sapUiBody">
+        <div id="content"></div>
+    </body>
+</html>

@@ -1,0 +1,138 @@
+{
+    "fruits": [
+        {
+            "counter": 0,
+            "name": "Apple",
+            "helthBenifits": "Good for antibiotic",
+            "imageUrl": "https://www.collinsdictionary.com/images/full/apple_158989157.jpg",
+            "price": 120,
+            "currency": "INR",
+            "unit": "Per kg"
+        },
+        {
+            "counter": 1,
+            "name": "Mango",
+            "helthBenifits": "Good for shuger",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Hapus_Mango.jpg",
+            "price": 100,
+            "currency": "INR",
+            "unit": "Per kg"
+        },
+        {
+            "counter": 2,
+            "name": "Banana",
+            "helthBenifits": "Good for fat",
+            "imageUrl": "https://www.healthxchange.sg/sites/hexassets/Assets/food-nutrition/good-reasons-to-eat-a-banana-today.jpg",
+            "price": 50,
+            "currency": "INR",
+            "unit": "Per dozen"
+        },
+        {
+            "counter": 3,
+            "name": "Orange",
+            "helthBenifits": "Good for vitamin C",
+            "imageUrl": "https://sethlui.com/wp-content/uploads/2021/06/Navel-Orange.jpg",
+            "price": 80,
+            "currency": "INR",
+            "unit":"Per kg"
+        },
+        {
+            "counter": 4,
+            "name": "Litchi",
+            "helthBenifits": "Good for heart",
+            "imageUrl": "https://thumbs.dreamstime.com/b/closeup-three-red-lychees-leaves-shooted-studio-isolated-white-floor-lighting-flashes-two-pulpy-ripe-lychee-187142610.jpg",
+            "price": 120,
+            "currency": "INR",
+            "unit":"Per kg"
+        }
+
+    ],
+    "cities": [{
+        "name": "Lucknow",
+        "famousFor": "Nawab"
+    },{
+        "name": "Barabanki",
+        "famousFor": "Dewa Shareef"
+    },{
+        "name": "Faizabad",
+        "famousFor": "Avodhya"
+    },{
+        "name": "Alahabad",
+        "famousFor": "MNIT"
+    },{
+        "name": "Kanput",
+        "famousFor": "lathor"
+    }],
+    "suppliers": [{
+        "name": "John",
+        "city": "Columbo",
+        "contact": 9567895313,
+        "suppFruits": [{
+            "name": "Banana",
+            "quantity": 120
+        },{
+            "name": "Apple",
+            "quantity": 90
+        },{
+            "name": "Mango",
+            "quantity": 80
+        }]
+    },{
+        "name": "Toni",
+        "city": "Mleshiya",
+        "contact": 9568888313,
+        "suppFruits": [{
+            "name": "Banana",
+            "quantity": 180
+        },{
+            "name": "Apple",
+            "quantity": 100
+        },{
+            "name": "Mango",
+            "quantity": 70
+        }]
+    },{
+        "name": "Stark",
+        "city": "Najeria",
+        "contact": 9500895313,
+        "suppFruits": [{
+            "name": "Banana",
+            "quantity": 130
+        },{
+            "name": "Apple",
+            "quantity": 85
+        },{
+            "name": "Mango",
+            "quantity": 65
+        }]
+    },{
+        "name": "Irika",
+        "city": "South Koria1",
+        "contact": 9567899993,
+        "suppFruits": [{
+            "name": "Banana",
+            "quantity": 90
+        },{
+            "name": "Apple",
+            "quantity": 85
+        },{
+            "name": "Mango",
+            "quantity": 80
+        }]
+    },{
+        "name": "Petar",
+        "city": "NewYark",
+        "contact": 9000895313,
+        "suppFruits": [{
+            "name": "Banana",
+            "quantity": 120
+        },{
+            "name": "Apple",
+            "quantity": 90
+        },{
+            "name": "Mango",
+            "quantity": 80
+        }]
+    }],
+    "chartType": "bar"
+}

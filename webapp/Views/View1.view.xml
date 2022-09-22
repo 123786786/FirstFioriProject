@@ -1,0 +1,47 @@
+<mvc:View xmlns:mvc = "sap.ui.core.mvc" xmlns="sap.m"
+          controllerName="ibm.sd.ap.Controllers.View1" >
+
+    <Page title="View 1">
+        <headerContent>
+            <!-- <Button icon="sap-icon://action" press="onGoTo" tooltip="Go Back"></Button> -->
+        </headerContent>
+    
+        <content>
+            <SearchField id="idSearch" search="onSearch"></SearchField>
+            <List id="idList" items="{/ProductSet}" itemPress="onListItemSelect" mode="SingleSelectMaster" 
+                  growing="true" growingThreshold="10" delete="onDeleteItem">
+                <items>
+                    <!-- <DisplayListItem label="Apple" value="Best Antibiotic"></DisplayListItem>
+                    <StandardListItem title="Banana" description="Best for fat" icon="https://thumbs.dreamstime.com/b/banana-fruits-over-white-background-41123052.jpg"></StandardListItem>
+                    <InputListItem>
+                        <HBox>
+                            <Label class="sapUiSmallMargin" text="Which food you like most"></Label>
+                            <Input></Input>
+                        </HBox>
+                    </InputListItem> -->
+                    <ObjectListItem type="Navigation" title="{PRODUCT_ID}" 
+                                    intro="{NAME}" 
+                                    number="{PRICE}"
+                                    numberUnit="{CURRENCY_CODE}" 
+                                    icon="sap-icon://product">
+                    </ObjectListItem>
+                    <!-- <CustomListItem>
+                        <Label class="sapUiSmallMargin" text="Do you want to order CoD"></Label>
+                        <Switch></Switch>
+                    </CustomListItem>
+                    <FeedListItem sender="Mr. Owaisi" text="Hey Ahamad, Are you good?" timestamp="Thu, 12 Sep" icon="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Asaduddin.jpg/1200px-Asaduddin.jpg">
+                    </FeedListItem>
+                    <ActionListItem text="Order Now" press="onGoTo">
+                    </ActionListItem> -->
+                </items>
+            </List>
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button text="Add" icon="sap-icon://add" press="onAdd"></Button>
+            </Toolbar>
+        </footer>
+    </Page>
+        
+</mvc:View>
